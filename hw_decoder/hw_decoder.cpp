@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 extern "C"
 {
 	#include <libavcodec/avcodec.h>
@@ -150,6 +152,7 @@ static int decode_write(AVCodecContext *avctx, AVPacket *packet)
 
 int main(int argc, char *argv[])
 {
+	cout<<"Everything starts from here"<<endl;
 	AVFormatContext *input_ctx = NULL;
 	int video_stream, ret;
 	AVStream *video = NULL;
